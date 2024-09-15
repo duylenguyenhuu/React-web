@@ -1,236 +1,142 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import { deepPurple } from "@mui/material/colors";
 import "./App.css";
+import TitleSections from "./page/left/activities";
+import Details from "./page/left/activities/detail";
+import DetailProjects from "./page/left/activities/detailProject";
+import Header from "./page/left/header";
+import Avatar from "@mui/material/Avatar";
+import Contacts from "./page/right/contact";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import { ReactNode } from "react";
 function App() {
+  const list = [
+    "+ Come up with ideas and logic for the game",
+    "+ Build game flow,develop functionality",
+  ];
+  const listSkills = [
+    "Unity",
+    "C#",
+    "Nodejs",
+    "Reacts",
+    "Figma",
+    "Miro",
+    "Jira",
+    "Blender",
+    "3dsmax",
+  ];
+
+  const contactList: { icon: ReactNode; text: string }[] = [
+    {
+      icon: <EmailOutlinedIcon />,
+      text: "3darchteach@gmail.com",
+    },
+    {
+      icon: <HomeOutlinedIcon />,
+      text: "46 Con Dau 23,Hoa Xua,Da Nang",
+    },
+    {
+      icon: <PhoneAndroidIcon />,
+      text: "+84 985000446",
+    },
+  ];
   return (
-    <Box className="p-3  min-h-screen ">
-      <div
-        className="p-2"
-        style={{
-          backgroundImage:
-            "linear-gradient(0,rgba(0,0,255,0.1),#1da1f2),url('https://wallpapercave.com/wp/WpDsR4v.jpg')",
-        }}
-      >
-        <Box className="header p-3">
-          <Box className="grid grid-cols-12 gap-4 ">
-            <Box className="col-span-3 text-">
-              <h1 className="text-orange-800 text-2xl font-medium ">
-                Logo Công Ty
-              </h1>
-            </Box>
-
-            <Box className="col-span-9 flex justify-between items-center">
-              <Box
-                className="bg-gray-100 w-[500px] h-10 flex justify-around items-center rounded-full"
-                bgcolor={"rgb(243 244 246 / 60%)"}
-              >
-                <p>Home</p>
-                <p>Sclution</p>
-                <p>Showhome</p>
-                <p className="text-orange-800">
-                  <span className="border-b-2 border-orange-800">Mar</span>
-                  ketplace
-                </p>
-                <p>Aboutlly</p>
-              </Box>
-              <Box className="pr-4 flex justify-end  items-center">
-                <SearchIcon sx={{ color: "white" }} />
-                <button
-                  className="bg-white rounded-full w-16 h-7 text-white ml-3"
-                  style={{ backgroundColor: "rgb(243 244 246 / 55%)" }}
-                >
-                  Login
-                </button>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-        <Box
-          className=" flex-1 h-full rounded-md "
-          bgcolor="rgb(243 244 246 / 50%)"
-        >
-          <Box className="p-3 grid lg:grid-cols-12 md:grid-cols-9 gap-4 md:gap-0 rounded-md h-full">
-            <Box
-              className="lg:col-span-8 md:col-span-5 rounded-md flex flex-col"
-              height={"790px"}
-            >
-              <Box className="relative flex flex-col justify-between w-full h-32 mb-4 rounded-md">
-                <h1 className="text-center lg:text-xl md:ml-32  ">
-                  Let's us Know exactly what
-                  <span className="text-green-700">functions</span> you need
-                </h1>
-                <Box
-                  className="custom-border absolute  top-1 lg:w-40 md:w-32 h-11 rounded-tl-md origin-top-left p-2"
-                  bgcolor={"rgb(243 244 246 / 70%)"}
-                >
-                  <button className=" border rounded-full bg-orange-800 lg:w-24 md:w-20 text-white">
-                    filet
-                  </button>
-                </Box>
-                <Box
-                  className="custom grid lg:grid-cols-8 md:grid-cols-6 gap-3 p-3 h-[87px] md:h-20 rounded-md rounded-tl-none content-center"
-                  bgcolor={"rgb(243 244 246 / 80%)"}
-                >
-                  <button className="bg-white border border-orange-800 rounded-md h-7 text-orange-800">
-                    Api
-                  </button>
-                  <button className="bg-white border border-orange-800 rounded-md h-7 text-orange-800">
-                    Api
-                  </button>
-                  <button className="bg-white rounded-md h-7">Api</button>
-                  <button className="bg-white rounded-md h-7">Api</button>
-                  <button className="bg-white rounded-md h-7">Api</button>
-                  <button className="bg-white rounded-md h-7">Api</button>
-                </Box>
-              </Box>
-              <Box
-                className=" custom-scrollbar grid lg:grid-cols-5 md:grid-cols-2  gap-3 pr-2 flex-1 overflow-y-auto"
-                style={{ height: "100px" }}
-              >
-                {Array.from({ length: 20 }).map((_, index) => (
-                  <Box className="snap-center" key={index}>
-                    <Card sx={{ maxWidth: 345 }}>
-                      <CardMedia
-                        sx={{ height: 80 }}
-                        image="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg"
-                        title="green iguana"
-                      />
-                      <CardContent className="flex flex-wrap justify-center">
-                        <button className="bg-orange-800 rounded-full w-full h-7 text-white	">
-                          Filer
-                        </button>
-                        <Typography
-                          className="text-center"
-                          variant="body2"
-                          color="text.secondary"
-                        >
-                          Lizards are a widespread group
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Box>
-                ))}
-              </Box>
-            </Box>
-            <Box className="relative grid col-span-4 rounded-tl-md p-2 mt-8">
-              <Box
-                className="relative p-2 rounded-b-md rounded-tl-md "
-                bgcolor={"rgb(243 244 246 / 80%)"}
-              >
-                <Box
-                  className="shopcartCustom-border absolute bg-red-200 right-0 -top-10 w-64 md:w-44 h-10  rounded-t-md"
-                  bgcolor={"rgb(243 244 246 / 80%)"}
-                >
-                  <Box className="flex justify-end items-center m-2 ">
-                    <HighlightOffIcon sx={{ color: "rgb(210, 105, 30)" }} />
-                    <button className="bg-green-700 rounded-full w-40 md:w-24 h-7 ml-2 text-white ">
-                      Your Cart
-                    </button>
-                  </Box>
-                </Box>
-                <Box className="relative flex justify-between m-2">
-                  <button className="text-green-700 rounded-full w-32 md:w-24 h-7 bg-slate-50">
-                    Delete
-                  </button>
-                  <button className="text-green-700 rounded-full w-32 md:w-24 h-7  bg-slate-50">
-                    Delete
-                  </button>
-                </Box>
-
-                <Box className="grid grid-cols-1 gap-2 lg:mb-60 md:mb-28 md:text-sm">
-                  <Box className=" grid grid-cols-3 gap-2 border-2 border-orange-800 rounded-md lg:p-3 md:p-1">
-                    <Box className="row-span-2 col-span-1 h-full ">
-                      <CardMedia
-                        sx={{ height: 70, borderRadius: 2 }}
-                        image="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg"
-                        title="green iguana"
-                      />
-                    </Box>
-                    <Box className=" col-span-2 ">
-                      <Box className="flex justify-between mb-2">
-                        <p>Web function Pack</p>
-                        <p className="text-orange-800 font-bold ">100.00 USD</p>
-                      </Box>
-                      <Box className="flex justify-between">
-                        <button className="rounded-full w-24 h-7 bg-slate-50 ">
-                          Delete
-                        </button>
-                        <p className="line-through">980 USD</p>
-                      </Box>
-                    </Box>
-                  </Box>
-                  <Box className=" grid grid-cols-3 gap-2 border-2 border-orange-800 rounded-md lg:p-3 md:p-1">
-                    <Box className="row-span-2 col-span-1 h-full ">
-                      <CardMedia
-                        sx={{ height: 70, borderRadius: 2 }}
-                        image="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg"
-                        title="green iguana"
-                      />
-                    </Box>
-                    <Box className=" col-span-2 ">
-                      <Box className="flex justify-between mb-2">
-                        <p>Web function Pack</p>
-                        <p className="text-orange-800 font-bold ">100.00 USD</p>
-                      </Box>
-                      <Box className="flex justify-between">
-                        <button className="rounded-full w-24 h-7 bg-slate-50 ">
-                          Delete
-                        </button>
-                        <p className="line-through">980 USD</p>
-                      </Box>
-                    </Box>
-                  </Box>
-                  <Box className=" grid grid-cols-3 gap-2 border-2 border-orange-800 rounded-md lg:p-3 md:p-1">
-                    <Box className="row-span-2 col-span-1 h-full ">
-                      <CardMedia
-                        sx={{ height: 70, borderRadius: 2 }}
-                        image="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg"
-                        title="green iguana"
-                      />
-                    </Box>
-                    <Box className=" col-span-2 ">
-                      <Box className="flex justify-between mb-2">
-                        <p>Web function Pack</p>
-                        <p className="text-orange-800 font-bold ">100.00 USD</p>
-                      </Box>
-                      <Box className="flex justify-between">
-                        <button className="rounded-full w-24 h-7 bg-slate-50 ">
-                          Delete
-                        </button>
-                        <p className="line-through">980 USD</p>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Box>
-                <Box className="relative border border-green-400  rounded-md lg:p-3 md:p-1 md:pt-5 pt-6 text-[15px] md:mt-64">
-                  <Box className="text-white absolute lg:bottom-[120px] -left-0.5  md:bottom-[116px] bg-green-700 w-28  text-center rounded-r-lg rounded-tl-lg p-1">
-                    <p>tieu de duoi</p>
-                  </Box>
-                  <Box className="flex justify-between">
-                    <p>12 Feabures</p> <p>1200.00 USD</p>
-                  </Box>
-                  <Box className="flex justify-between border-b border-b-red-400">
-                    <p>Discount</p> <p>100.00 USD</p>
-                  </Box>
-                  <p className="text-right text-green-700 font-bold">
-                    1100.00 USD
-                  </p>
-                  <Box className="flex justify-end pt-2 md:pt-0 pr-2 text-sm">
-                    <button className="bg-white p-1 px-4 border border-orange-700 rounded-sm mr-2 md:m-1 ">
-                      Contact us
-                    </button>
-                    <button className="bg-white p-1 px-4 border border-orange-700 rounded-sm md:m-1">
-                      Place order
-                    </button>
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
+    <div className="w-[1200px]">
+      <div className="grid grid-cols-12 ">
+        <div className="col-span-1"></div>
+        <div className="col-span-7 border-l-2 border-l-gray-00 pt-10">
+          <Header PersonName="QUANG NGUYEN" jobTitle="Game Developer" />
+          <TitleSections title="EXPERIENCE">
+            <Details
+              startDate="Feb 2020"
+              endDate="Nov 2022"
+              project="GAME DEVELOPER"
+              cty="FPT Complex"
+              address="Da Nang, Viet Nam"
+              describe="As a game developer,my teammates and Im have developer games that
+              have ben highly appreciated by users and received city-level
+              project awards."
+            />
+            <Details
+              startDate="Jan 2022"
+              endDate="Jul 2024"
+              project="GAME DEVELOPER,GAME LEADER"
+              cty="VACS Company"
+              address="Da Nang, Viet Nam"
+              describe="I have developed national level projects with my team for lap 5companies in Japan"
+            />
+          </TitleSections>
+          <TitleSections title="EDUCATION">
+            <Details
+              startDate="Jul 2018"
+              endDate="Nov 2020"
+              project="SOFTWARE ENGINEER"
+              cty="FPT University"
+              address="Da Nang,Viet Nam"
+            ></Details>
+          </TitleSections>
+          <TitleSections title="PROJECTS">
+            <DetailProjects label="Name" content="MEDUVERSE" />
+            <DetailProjects
+              label="Description"
+              content="Meduverse -Educational Platform developer by FPT Corporation. Freely explore create, learn and entertain in the
+Meduverse universe - Where children can adventure with friends i n a vast and colorful world of knowledge."
+            />
+            <DetailProjects label="Role" content="Game Developer" />
+            <DetailProjects
+              label="Role in the project"
+              content={
+                <ul className="list-none">
+                  {list.map((res) => (
+                    <li>{res}</li>
+                  ))}
+                </ul>
+              }
+              sx="grid"
+            />
+            <DetailProjects
+              label="Technology"
+              content="Unity,Photon,Lua,C#,Nodejs"
+            />
+            <DetailProjects
+              label="Link"
+              content=" hips./play.google.com/store/apps/details"
+            />
+          </TitleSections>
+        </div>
+        <div className="col-span-4  bg-[#99A298] p-10">
+          <div className="flex justify-center">
+            <Avatar sx={{ bgcolor: deepPurple[500], width: 250, height: 250 }}>
+              OP
+            </Avatar>
+          </div>
+          <div className="my-10">
+            {contactList.map(({ icon, text }) => (
+              <Contacts icons={icon} texts={text} key={text} />
+            ))}
+          </div>
+          <TitleSections title="OBJECTIVE" titleSx="text-black">
+            <p className="text-[#3e423d]">
+              Unity game development expert whti aver 4years al experience at
+              prestigious companies. Received city-level project award
+            </p>
+          </TitleSections>
+          <TitleSections title="SKILLS" titleSx="text-black">
+            <ul className="list-disc">
+              {listSkills.map((items) => (
+                <li className="ml-[30px]">{items}</li>
+              ))}
+            </ul>
+          </TitleSections>
+          <TitleSections title="LANGUAGES" titleSx="text-black">
+            <ul className="list-disc">
+              <li className="ml-[30px]">Japan | Intermediate</li>
+            </ul>
+          </TitleSections>
+        </div>
       </div>
-    </Box>
+    </div>
   );
 }
 

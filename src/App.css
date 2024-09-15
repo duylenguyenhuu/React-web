@@ -1,22 +1,8 @@
-.custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-.custom-border {
-  clip-path: polygon(0 0, 68% 0, 100% 100%, 0% 100%);
-}
-.shopcartCustom-border {
-  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Libre Caslon Text", "Noto Serif SC", "Noto Serif JP",
+    "Noto Serif Hebrew";
 }

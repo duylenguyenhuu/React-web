@@ -1,0 +1,9 @@
+.dropdown {
+  @apply bg-[#EAEAEA] border border-[#B9B9B9] lg:text-[14px] text-[12px] font-[500] whitespace-nowrap rounded-lg cursor-pointer w-32;
+
+  .dropdown-btn {
+    @apply p-1 bg-white shadow-[3px_3px_10px_6px_rgba(0,0,0,0.06)] font-bold flex items-center justify-between w-32;
+  }
+  .dropdown-content {
+  }
+}
